@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+<br />
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>to contact management</p>
+</div>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Contacts.Count; i++)
+        {
+            <tr>
+                <th scope="row">@(i + 1)</th>
+                <td>@Model.Contacts[i].Name</td>
+                <td>@Model.Contacts[i].Contact</td>
+                <td>@Model.Contacts[i].Email</td>
+                <td>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

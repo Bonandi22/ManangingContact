@@ -4,19 +4,19 @@
 @{
     ViewData["Title"] = "Contact List";
 }
-
-<h1>@ViewData["Title"]</h1>
-
-<p>   
-    <a class="btn btn-primary btn-sm" role="button" asp-page="Create">Create New</a>
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>    
+</div>
+<br />
+@*<p>   
+    <a type="button" class="btn btn-outline-success" asp-page="Create">Create New</a>
 </p>
-
-<table class="table">
+*@<br />
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Contacts[0].Name)
-                
+                @Html.DisplayNameFor(model => model.Contacts[0].Name)                
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Contacts[0].Contact)
@@ -40,9 +40,9 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.Id" type="button" class="btn btn-outline-primary">Edit</a> 
+                <a asp-page="./Details" asp-route-id="@item.Id" type="button" class="btn btn-outline-secondary">Details</a> 
+                <a asp-page="./Delete" asp-route-id="@item.Id" type="button" class="btn btn-outline-danger">Delete</a>
             </td>
         </tr>
 }

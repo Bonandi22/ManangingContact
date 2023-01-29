@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ManangingContact.Pages
@@ -15,7 +14,7 @@ namespace ManangingContact.Pages
 
         private ManangingContactContext _Context;
 
-        public IList<Contacts> Contacts;
+        public IList<Contacts> Contact;
 
         public IndexModel(ILogger<IndexModel> logger, ManangingContactContext Context)
         {
@@ -25,7 +24,7 @@ namespace ManangingContact.Pages
 
         public async Task OnGetAsync()
         {
-            Contacts = await _Context.Contacts.ToListAsync<Contacts>();
+            Contact = await _Context.Contacts.ToListAsync<Contacts>();
         }
     }
 }

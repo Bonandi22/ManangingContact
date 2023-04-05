@@ -1,6 +1,7 @@
 ﻿using ManangingContact.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace ManangingContact.Data
 {
     public class ManangingContactContext : DbContext
